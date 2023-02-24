@@ -312,10 +312,13 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
       borderRadius: BorderRadius.all(
         widget.borderRadius,
       ),
-      child: SizedBox(
+      child: Container(
         height: height,
         width: MediaQuery.of(context).size.width,
         child: Row(
+        padding: EdgeInsets.only(
+                bottom: additionalBottomPadding,
+              ),
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             for (var i = 0; i < widget.items.length; i++)
@@ -347,9 +350,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
                 right: 16,
                 bottom: additionalBottomPadding,
               )
-            : EdgeInsets.only(
-                bottom: additionalBottomPadding,
-              ),
+            : EdgeInsets.zero,
         child: ClipRRect(
           borderRadius: BorderRadius.all(
             widget.borderRadius,
@@ -374,9 +375,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
                 right: 16,
                 bottom: additionalBottomPadding,
               )
-            : EdgeInsets.only(
-                bottom: additionalBottomPadding,
-              ),
+            : EdgeInsets.zero,
         child: bar,
       );
     }
