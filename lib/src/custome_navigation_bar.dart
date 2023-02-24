@@ -315,10 +315,10 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
       child: Container(
         height: height,
         width: MediaQuery.of(context).size.width,
-        child: Row(
         padding: EdgeInsets.only(
                 bottom: additionalBottomPadding,
               ),
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             for (var i = 0; i < widget.items.length; i++)
