@@ -315,7 +315,9 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
       child: Container(
         height: height,
         width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.only(
+        padding: widget.isFloating
+            ? EdgeInsets.zero
+            : EdgeInsets.only(
                 bottom: additionalBottomPadding,
               ),
         child: Row(
