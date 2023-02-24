@@ -347,7 +347,9 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
                 right: 16,
                 bottom: additionalBottomPadding,
               )
-            : EdgeInsets.zero,
+            : EdgeInsets.only(
+                bottom: additionalBottomPadding,
+              ),
         child: ClipRRect(
           borderRadius: BorderRadius.all(
             widget.borderRadius,
@@ -372,7 +374,9 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
                 right: 16,
                 bottom: additionalBottomPadding,
               )
-            : EdgeInsets.zero,
+            : EdgeInsets.only(
+                bottom: additionalBottomPadding,
+              ),
         child: bar,
       );
     }
