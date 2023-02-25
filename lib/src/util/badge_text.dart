@@ -36,7 +36,7 @@ class BadgeText extends StatelessWidget {
                 count! > 10 ? '10+' : '$count',
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 6,
+                  fontSize: 12,
                 ),
                 textAlign: TextAlign.center,
               ),
