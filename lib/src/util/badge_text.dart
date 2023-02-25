@@ -23,10 +23,10 @@ class BadgeText extends StatelessWidget {
       top: 0,
       child: show!
           ? Container(
-              padding: const EdgeInsets.all(2),
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
               decoration: BoxDecoration(
                 color: Colors.red,
-                borderRadius: BorderRadius.circular(6),
+                borderRadius: BorderRadius.circular(20),
               ),
               constraints: const BoxConstraints(
                 minWidth: 12,
@@ -36,7 +36,7 @@ class BadgeText extends StatelessWidget {
                 count! > 10 ? '10+' : '$count',
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 12,
+                  fontSize: 10,
                 ),
                 textAlign: TextAlign.center,
               ),

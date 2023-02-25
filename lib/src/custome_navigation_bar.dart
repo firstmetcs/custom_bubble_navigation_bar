@@ -415,6 +415,7 @@ class _CustomNavigationBarTile extends StatelessWidget {
     return Transform.scale(
       scale: 1.0 + scale!,
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           IconTheme(
             data: IconThemeData(
@@ -426,7 +427,7 @@ class _CustomNavigationBarTile extends StatelessWidget {
           BadgeText(
             show: item!.showBadge,
             count: item!.badgeCount,
-            right: 0.0,
+            right: -10.0,
           )
         ],
       ),
